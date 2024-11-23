@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prayer Request Confirmation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='images/Kings LOGO PNG.png') }}" alt="Your Picture" class="profile-image">
+        <h1>Thank You, {{ name }}!</h1>
+        <p>Your prayer request has been submitted. We will pray for you. 🙏</p>
+        <a href="{{ url_for('index') }}" class="button">Submit Another Request</a>
+    </div>
+</body>
+</html>

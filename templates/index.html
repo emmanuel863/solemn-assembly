@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Add the viewport meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Request Submission</title>
+    <!-- Font and CSS links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='images/Kings LOGO PNG.png') }}" alt="Your Picture" class="profile-image">
+        <h1>Prayer Request</h1>
+        
+        <form id="prayerForm" method="post" action="/submit_request">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+            
+            <div class="form-group">
+                <label for="request">Prayer Request</label>
+                <textarea id="request" name="request" required placeholder="Share your prayer request..."></textarea>
+            </div>
+            
+            <button type="submit">Submit Request</button>
+        </form>
+        <!-- Confirmation message -->
+        <div id="confirmation" class="confirmation">
+            Your prayer request has been submitted. We will pray for you. 🙏
+        </div>
+    </div>
+</body>
+</html>
